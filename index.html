@@ -1,206 +1,342 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Salahuddin Ahmed</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Salahuddin Ahmed</title>
 
-<style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  max-width: 1100px;
-  margin: auto;
-  line-height: 1.6;
-}
+  <style>
+    :root{
+      --text:#111;
+      --muted:#555;
+      --line:#e6e6e6;
+      --bg:#ffffff;
+      --chip:#f5f6f7;
+      --link:#0b63d1;
+    }
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height:1.55;
+    }
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding:28px 18px 60px;
+    }
+    .nav{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+      align-items:center;
+      padding:12px 0 18px;
+      border-bottom:1px solid var(--line);
+    }
+    .nav a{
+      color:var(--link);
+      text-decoration:none;
+      font-weight:600;
+      font-size:14px;
+    }
+    .nav a:hover{ text-decoration:underline; }
 
-header {
-  padding: 40px 20px 10px 20px;
-}
+    .hero{
+      padding:28px 0 10px;
+    }
+    h1{
+      margin:0 0 6px;
+      font-size:42px;
+      letter-spacing:-0.5px;
+    }
+    .tagline{
+      font-weight:700;
+      color:var(--muted);
+      margin:0 0 14px;
+    }
+    .summary{
+      max-width:80ch;
+      color:var(--muted);
+      margin:0 0 18px;
+    }
+    .links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:10px;
+    }
+    .btn{
+      display:inline-block;
+      padding:10px 12px;
+      border:1px solid var(--line);
+      border-radius:10px;
+      text-decoration:none;
+      color:var(--text);
+      font-weight:700;
+      font-size:14px;
+      background:#fff;
+    }
+    .btn:hover{ border-color:#cfcfcf; }
 
-h1 {
-  margin-bottom: 5px;
-}
+    .skills{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:14px;
+    }
+    @media (min-width: 820px){
+      .skills{ grid-template-columns: 1fr 1fr 1fr; }
+    }
+    .card{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:16px;
+      background:#fff;
+    }
+    .card h2{
+      margin:0 0 10px;
+      font-size:18px;
+    }
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .chip{
+      background:var(--chip);
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:6px 10px;
+      font-size:13px;
+      color:var(--muted);
+      font-weight:600;
+      white-space:nowrap;
+    }
 
-.subtitle {
-  font-weight: bold;
-  margin-bottom: 20px;
-}
+    .section{
+      margin-top:34px;
+      padding-top:26px;
+      border-top:1px solid var(--line);
+    }
+    .section h2{
+      margin:0 0 14px;
+      font-size:22px;
+    }
 
-section {
-  padding: 30px 20px;
-  border-top: 1px solid #ddd;
-}
+    .project{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:16px;
+      margin-bottom:14px;
+      background:#fff;
+    }
+    .project h3{ margin:0 0 8px; font-size:18px; }
+    .project p{ margin:0 0 10px; color:var(--muted); }
+    .project ul{ margin:0; padding-left:18px; color:var(--muted); }
 
-h2 {
-  margin-bottom: 15px;
-}
+    .grid2{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:14px;
+    }
+    @media (min-width: 900px){
+      .grid2{ grid-template-columns: 1fr 1fr; }
+    }
 
-.project {
-  margin-bottom: 30px;
-}
+    .imgrow{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:12px;
+      margin-top:12px;
+    }
+    @media (min-width: 900px){
+      .imgrow{ grid-template-columns: 1fr 1fr 1fr; }
+    }
+    img{
+      width:100%;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#fff;
+      display:block;
+    }
 
-img {
-  width: 100%;
-  max-width: 650px;
-  margin-top: 10px;
-  border-radius: 8px;
-}
-
-.tools-list, .experience-list {
-  columns: 2;
-}
-
-a {
-  color: #0056b3;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.nav {
-  padding: 10px 20px;
-  border-bottom: 1px solid #ddd;
-}
-
-.nav a {
-  margin-right: 15px;
-}
-</style>
+    .foot{
+      margin-top:36px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
+    }
+    a{ color:var(--link); }
+  </style>
 </head>
 
 <body>
+  <div class="wrap">
+    <div class="nav">
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#gallery">Characterization Gallery</a>
+      <a href="#experience">Industry Experience</a>
+      <a href="publications.html">Publications</a>
+      <a href="CV.pdf" target="_blank" rel="noreferrer">Download CV</a>
+    </div>
 
-<div class="nav">
-<a href="#projects">Projects</a>
-<a href="#tools">Tools</a>
-<a href="#experience">Professional Experience</a>
-<a href="publications.html">Publications</a>
-<a href="CV.pdf" target="_blank">Download CV</a>
-</div>
+    <div class="hero">
+      <h1>Salahuddin Ahmed</h1>
+      <div class="tagline">Material Development • Materials Characterization • Cleanroom Microfabrication</div>
 
-<header>
-<h1>Salahuddin Ahmed</h1>
-<div class="subtitle">Material Development | Characterization | Microfabrication</div>
+      <p class="summary">
+        Engineer with hands-on experience in material development, characterization, 3D printing, lithography,
+        cleanroom processing, and device fabrication. Developed conductive composites and microfabricated electrodes
+        with performance validated through materials characterization and electrophysiological recording.
+      </p>
 
-<p>
-Engineer with hands-on experience in material development, advanced characterization, 
-3D printing, lithography, cleanroom processing, and device fabrication. 
-Developed conductive composites and microfabricated electrodes with performance 
-validated through materials characterization and electrophysiological recording.
-</p>
-</header>
+      <div class="links">
+        <a class="btn" href="mailto:s.ahmed.buetme156@gmail.com">Email</a>
+        <a class="btn" href="https://www.linkedin.com/in/s-ahmed156/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn" href="https://scholar.google.com/citations?user=03_kQUQAAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>
+      </div>
 
-<section id="projects">
-<h2>Projects</h2>
+      <!-- SKILLS FIRST -->
+      <div id="skills" class="skills">
+        <div class="card">
+          <h2>Material Development</h2>
+          <div class="chips">
+            <span class="chip">Conductive composites (LM / polymer)</span>
+            <span class="chip">Conductive hydrogels (PEDOT:PSS-based)</span>
+            <span class="chip">Bioadhesive polymer networks (PU–PAA)</span>
+            <span class="chip">Ink formulation for DIW</span>
+            <span class="chip">Process–structure–property tuning</span>
+          </div>
+        </div>
 
-<div class="project">
-<h3>Self-Assembly Enabled Printable Asymmetric Self-Insulated Conductor (aSISC)</h3>
-<p>
-Developed liquid-metal based conductive composite systems for stretchable electronics.
-Designed asymmetric self-insulated architecture eliminating secondary encapsulation.
-Validated electrical stability, mechanical durability, and device-level integration
-for wearable and neural interface systems.
-</p>
-<img src="images/asisc.jpg" alt="aSISC device">
-</div>
+        <div class="card">
+          <h2>Materials Characterization</h2>
+          <div class="chips">
+            <span class="chip">SEM / EDS</span>
+            <span class="chip">XPS</span>
+            <span class="chip">FTIR (Bruker V70)</span>
+            <span class="chip">Raman (LabRAM HR)</span>
+            <span class="chip">XRD</span>
+            <span class="chip">DSC / TGA</span>
+            <span class="chip">AFM</span>
+            <span class="chip">Rheology</span>
+            <span class="chip">Electrical & impedance testing</span>
+          </div>
+        </div>
 
-<div class="project">
-<h3>Lithography-Based Mesh Electrode</h3>
-<p>
-Designed and fabricated micro-patterned mesh electrodes using spin coating,
-optical lithography (MLA, MABA6), thin film processing, and pattern transfer.
-Improved feature fidelity and electrical continuity through process optimization
-and structural validation.
-</p>
-<img src="images/mesh.jpg" alt="Mesh electrode">
-</div>
+        <div class="card">
+          <h2>Cleanroom & Microfabrication</h2>
+          <div class="chips">
+            <span class="chip">Spin coating</span>
+            <span class="chip">Optical lithography (MLA, MABA6)</span>
+            <span class="chip">Thin film deposition</span>
+            <span class="chip">Etching / pattern transfer</span>
+            <span class="chip">Micro-patterned metal structures</span>
+            <span class="chip">Device fabrication workflows</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<div class="project">
-<h3>Stick-and-Play Bioadhesive Hairlike EEG Electrode</h3>
-<p>
-Developed DIW-fabricated hairlike electrode architecture integrating
-conductive polymer hydrogel and bioadhesive interface.
-Validated chronic scalp adhesion and electrophysiological signal acquisition
-without gel or skin preparation.
-</p>
-<img src="images/hairlike.jpg" alt="Hairlike electrode">
-</div>
+    <div id="projects" class="section">
+      <h2>Projects</h2>
 
-<div class="project">
-<h3>Conductive Adhesive Systems</h3>
-<p>
-Engineered PU–PAA graft interpenetrating network integrated with PEDOT:PSS
-for conformal skin-contact electronics. Performed chemical, mechanical, and
-electrical characterization to evaluate interfacial reliability and device stability.
-</p>
-<img src="images/adhesive.jpg" alt="Conductive adhesive">
-</div>
+      <div class="project">
+        <h3>aSISC — Printable Asymmetric Self-Insulated Conductor</h3>
+        <p>Industry-relevant skills: composite formulation, print-process optimization, electrical validation, reliability testing.</p>
+        <ul>
+          <li>Developed printable LM/conducting-polymer composite conductor system and validated conductivity and stability.</li>
+          <li>Demonstrated device integration for human-interface applications and evaluated mechanical/electrical performance.</li>
+        </ul>
+      </div>
 
-<div class="project">
-<h3>Nanofiber-Based Drug Delivery Systems</h3>
-<p>
-Developed nanofiber membranes using centrifugal spinning (Forcespinning).
-Investigated processing–structure–property relationships of PLGA, PVA,
-pullulan/chitosan, and composite systems.
-Performed thermal, structural, and biological characterization
-for biomedical applications.
-</p>
-<img src="images/nanofiber_sem.jpg" alt="Nanofiber SEM">
-</div>
+      <div class="project">
+        <h3>Lithography-Based Mesh Electrode</h3>
+        <p>Industry-relevant skills: cleanroom process execution, feature fidelity, defect reduction, pattern uniformity.</p>
+        <ul>
+          <li>Fabricated micro-patterned mesh structures using spin coating and lithography (MLA, MABA6).</li>
+          <li>Improved pattern quality through iterative process tuning and electrical/microscopy validation.</li>
+        </ul>
+      </div>
 
-</section>
+      <div class="project">
+        <h3>Stick-and-Play Bioadhesive Hairlike EEG Electrode</h3>
+        <p>Industry-relevant skills: device architecture, materials integration, interfacial reliability, biomedical validation.</p>
+        <ul>
+          <li>Integrated conductive hydrogel electrode materials with bioadhesive interface for stable scalp contact.</li>
+          <li>Validated electrophysiological recording performance in human-use scenarios.</li>
+        </ul>
+      </div>
 
-<section id="tools">
-<h2>Tools I Used</h2>
+      <div class="project">
+        <h3>Conductive Adhesive Systems</h3>
+        <p>Industry-relevant skills: polymer network engineering, chemistry verification, mechanical/electrical qualification.</p>
+        <ul>
+          <li>Developed PU–PAA based conductive adhesive concepts for conformal skin-contact electronics.</li>
+          <li>Used spectroscopy and electrical testing to verify chemistry, conductivity, and stability.</li>
+        </ul>
+      </div>
 
-<div class="tools-list">
-<ul>
-<li>SEM / EDS</li>
-<li>XPS</li>
-<li>FTIR (Bruker V70)</li>
-<li>Raman (LabRAM HR)</li>
-<li>XRD</li>
-<li>DSC / TGA</li>
-<li>AFM</li>
-<li>Rheometry</li>
-<li>Optical Lithography (MLA, MABA6)</li>
-<li>Thin Film Deposition</li>
-<li>3D Printing (DIW)</li>
-<li>Electrical & Impedance Testing</li>
-</ul>
-</div>
+      <div class="project">
+        <h3>Nanofiber Drug-Delivery Membranes</h3>
+        <p>Industry-relevant skills: process–structure–property analysis, QC-style characterization, materials validation.</p>
+        <ul>
+          <li>Fabricated nanofiber membranes via centrifugal spinning and characterized morphology/thermal behavior.</li>
+          <li>Correlated processing conditions with fiber structure and material stability using SEM, DSC/TGA, FTIR, XRD.</li>
+        </ul>
+      </div>
+    </div>
 
-<!-- Add characterization images -->
-<img src="images/sem.jpg" alt="SEM image">
-<img src="images/xps.jpg" alt="XPS data">
-<img src="images/dsc.jpg" alt="DSC curve">
+    <div id="gallery" class="section">
+      <h2>Characterization Gallery</h2>
+      <p style="color:var(--muted); margin-top:0;">
+        Upload your figures as images into <strong>/images</strong> and update the filenames below.
+        Keep them as screenshots/crops you created (avoid copying copyrighted journal figure panels).
+      </p>
 
-</section>
+      <div class="imgrow">
+        <img src="images/sem_1.jpg" alt="SEM image">
+        <img src="images/xps_1.jpg" alt="XPS spectrum">
+        <img src="images/dsc_1.jpg" alt="DSC curve">
+      </div>
+      <div class="imgrow">
+        <img src="images/eds_1.jpg" alt="EDS map">
+        <img src="images/xrd_1.jpg" alt="XRD pattern">
+        <img src="images/rheology_1.jpg" alt="Rheology plot">
+      </div>
+    </div>
 
-<section id="experience">
-<h2>Professional Experience</h2>
+    <div id="experience" class="section">
+      <h2>Industry Experience — BSRM Steels Ltd.</h2>
+      <div class="grid2">
+        <div class="project">
+          <h3>Equipment Engineer (Installation & Commissioning)</h3>
+          <ul>
+            <li>Led installation and commissioning of CCM, LRF, and piping systems for a 700,000-ton steel facility.</li>
+            <li>Coordinated planning with design teams, suppliers, and contractors to prevent conflicts and meet timelines.</li>
+            <li>Implemented modifications and improvements reducing costs and improving operational flexibility.</li>
+          </ul>
+        </div>
+        <div class="project">
+          <h3>Reliability & Maintenance Execution</h3>
+          <ul>
+            <li>Developed predictive/preventive/corrective maintenance strategy to reduce unplanned downtime.</li>
+            <li>Performed emergency maintenance during shifts to maintain continuous production.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-<ul class="experience-list">
-<li>Led installation and commissioning of Continuous Casting Machines (CCM) and Ladle Refining Furnaces (LRF).</li>
-<li>Developed predictive and preventive maintenance strategies reducing downtime.</li>
-<li>Executed mechanical system planning and coordinated large-scale industrial installation projects.</li>
-<li>Performed emergency maintenance during production ensuring zero mechanical delays.</li>
-</ul>
+    <div class="foot">
+      © <span id="y"></span> Salahuddin Ahmed • Built with GitHub Pages
+    </div>
+  </div>
 
-</section>
-
-<section>
-<h2>Contact</h2>
-<p>
-Email: <a href="mailto:s.ahmed.buetme156@gmail.com">s.ahmed.buetme156@gmail.com</a><br>
-LinkedIn: <a href="https://www.linkedin.com/in/s-ahmed156/" target="_blank">Profile</a><br>
-Google Scholar: <a href="https://scholar.google.com/citations?user=03_kQUQAAAAJ" target="_blank">Scholar Link</a>
-</p>
-</section>
-
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
