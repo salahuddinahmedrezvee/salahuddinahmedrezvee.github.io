@@ -1,55 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salahuddin Ahmed</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  max-width: 1100px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+header {
+  padding: 40px 20px 10px 20px;
+}
+
+h1 {
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+section {
+  padding: 30px 20px;
+  border-top: 1px solid #ddd;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+.project {
+  margin-bottom: 30px;
+}
+
+img {
+  width: 100%;
+  max-width: 650px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+.tools-list, .experience-list {
+  columns: 2;
+}
+
+a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.nav {
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav a {
+  margin-right: 15px;
+}
+</style>
+</head>
+
 <body>
 
+<div class="nav">
+<a href="#projects">Projects</a>
+<a href="#tools">Tools</a>
+<a href="#experience">Professional Experience</a>
+<a href="publications.html">Publications</a>
+<a href="CV.pdf" target="_blank">Download CV</a>
+</div>
+
+<header>
 <h1>Salahuddin Ahmed</h1>
-<p><strong>Materials Characterization | Printable Electronics | Microfabrication</strong></p>
+<div class="subtitle">Material Development | Characterization | Microfabrication</div>
 
 <p>
-I am a Ph.D. candidate in Engineering Science and Mechanics at Penn State University, working on materials development, device fabrication, and advanced characterization for biomedical applications. My research focuses on designing conductive polymer and liquid-metal composite systems, fabricating soft and microstructured electronic devices, and validating their mechanical, electrical, and interfacial performance for human-integrated applications.
-
-My work spans printable electronics, lithography-based microfabrication, and bioadhesive interface engineering. I develop material systems, translate them into functional devices, and systematically characterize their structure–property relationships using microscopy, spectroscopy, thermal analysis, rheology, and electrical testing. These efforts support the development of scalable, reliable bioelectronic platforms for neural and wearable biomedical systems.
+Engineer with hands-on experience in material development, advanced characterization, 
+3D printing, lithography, cleanroom processing, and device fabrication. 
+Developed conductive composites and microfabricated electrodes with performance 
+validated through materials characterization and electrophysiological recording.
 </p>
+</header>
 
-<h2>Project</h2>
+<section id="projects">
+<h2>Projects</h2>
 
-<h3>Stick-and-Play Bioadhesive Hairlike Electrodes for Chronic EEG (npj Biomedical Innovations, 2025)</h3>
-<ul>
-  <li>Fabricated hairlike EEG devices using DIW 3D printing for reproducible multilayer device construction</li>
-  <li>Built a 4-layer architecture: PDMS bottom/top encapsulation, conductive polymer hydrogel electrode, and printed bioadhesive layer</li>
-  <li>Used a conductive polymer hydrogel electrode system based on PEDOT:PSS and hydrophilic polyurethane (PU)</li>
-  <li>Designed a biomimetic “hairlike” interconnect geometry (thin, narrow traces) to blend with hair and minimize visibility</li>
-  <li>Engineered a UV-polymerized bioadhesive (PU–PAA) and functionalized it using EDC/NHS chemistry to strengthen skin bonding</li>
-  <li>Validated adhesion stability and interface reliability across daily-use conditions and repeat loading/handling scenarios</li>
-</ul>
-
-<h3>Printable Liquid-Metal Composite Conductors & Functional Interconnects</h3>
-<ul>
-  <li>Formulated printable liquid-metal composite conductors for patterned interconnects and device wiring</li>
-  <li>Optimized print/process parameters to improve line fidelity, continuity, and electrical repeatability</li>
-  <li>Correlated microstructure and dispersion state with electrical behavior using microscopy and spectroscopy</li>
-</ul>
-
-<h3>Microfabrication: Lithography-Based Patterned Metal / Mesh Structures</h3>
-<ul>
-  <li>Executed cleanroom photolithography workflow using spin coating, exposure/alignment, and pattern development</li>
-  <li>Fabricated micro-patterned metal structures for device-level layouts and mesh-style geometries</li>
-  <li>Performed process iteration to reduce pattern defects and improve feature uniformity</li>
-</ul>
-
-<h2>Tools I Used (Characterization & Validation)</h2>
-<ul>
-  <li><strong>Microscopy / Surface:</strong> SEM, EDS mapping, AFM</li>
-  <li><strong>Spectroscopy:</strong> FTIR (Bruker V70), Raman (LabRAM HR), XPS</li>
-  <li><strong>Structure / Thermal:</strong> XRD, DSC, TGA</li>
-  <li><strong>Rheology / Printability:</strong> shear-thinning and recovery characterization for DIW inks</li>
-  <li><strong>Electrical:</strong> resistance/conductivity checks; interface/impedance-style validation for electrode systems</li>
-</ul>
-
-<h2>Links</h2>
+<div class="project">
+<h3>Self-Assembly Enabled Printable Asymmetric Self-Insulated Conductor (aSISC)</h3>
 <p>
-  <a href="mailto:s.ahmed.buetme156@gmail.com">Email</a> |
-  <a href="https://www.linkedin.com/in/s-ahmed156/" target="_blank" rel="noreferrer">LinkedIn</a> |
-  <a href="https://scholar.google.com/citations?user=03_kQUQAAAAJ" target="_blank" rel="noreferrer">Google Scholar</a> |
-  <a href="CV.pdf" target="_blank" rel="noreferrer">Download CV</a>
+Developed liquid-metal based conductive composite systems for stretchable electronics.
+Designed asymmetric self-insulated architecture eliminating secondary encapsulation.
+Validated electrical stability, mechanical durability, and device-level integration
+for wearable and neural interface systems.
 </p>
+<img src="images/asisc.jpg" alt="aSISC device">
+</div>
+
+<div class="project">
+<h3>Lithography-Based Mesh Electrode</h3>
+<p>
+Designed and fabricated micro-patterned mesh electrodes using spin coating,
+optical lithography (MLA, MABA6), thin film processing, and pattern transfer.
+Improved feature fidelity and electrical continuity through process optimization
+and structural validation.
+</p>
+<img src="images/mesh.jpg" alt="Mesh electrode">
+</div>
+
+<div class="project">
+<h3>Stick-and-Play Bioadhesive Hairlike EEG Electrode</h3>
+<p>
+Developed DIW-fabricated hairlike electrode architecture integrating
+conductive polymer hydrogel and bioadhesive interface.
+Validated chronic scalp adhesion and electrophysiological signal acquisition
+without gel or skin preparation.
+</p>
+<img src="images/hairlike.jpg" alt="Hairlike electrode">
+</div>
+
+<div class="project">
+<h3>Conductive Adhesive Systems</h3>
+<p>
+Engineered PU–PAA graft interpenetrating network integrated with PEDOT:PSS
+for conformal skin-contact electronics. Performed chemical, mechanical, and
+electrical characterization to evaluate interfacial reliability and device stability.
+</p>
+<img src="images/adhesive.jpg" alt="Conductive adhesive">
+</div>
+
+<div class="project">
+<h3>Nanofiber-Based Drug Delivery Systems</h3>
+<p>
+Developed nanofiber membranes using centrifugal spinning (Forcespinning).
+Investigated processing–structure–property relationships of PLGA, PVA,
+pullulan/chitosan, and composite systems.
+Performed thermal, structural, and biological characterization
+for biomedical applications.
+</p>
+<img src="images/nanofiber_sem.jpg" alt="Nanofiber SEM">
+</div>
+
+</section>
+
+<section id="tools">
+<h2>Tools I Used</h2>
+
+<div class="tools-list">
+<ul>
+<li>SEM / EDS</li>
+<li>XPS</li>
+<li>FTIR (Bruker V70)</li>
+<li>Raman (LabRAM HR)</li>
+<li>XRD</li>
+<li>DSC / TGA</li>
+<li>AFM</li>
+<li>Rheometry</li>
+<li>Optical Lithography (MLA, MABA6)</li>
+<li>Thin Film Deposition</li>
+<li>3D Printing (DIW)</li>
+<li>Electrical & Impedance Testing</li>
+</ul>
+</div>
+
+<!-- Add characterization images -->
+<img src="images/sem.jpg" alt="SEM image">
+<img src="images/xps.jpg" alt="XPS data">
+<img src="images/dsc.jpg" alt="DSC curve">
+
+</section>
+
+<section id="experience">
+<h2>Professional Experience</h2>
+
+<ul class="experience-list">
+<li>Led installation and commissioning of Continuous Casting Machines (CCM) and Ladle Refining Furnaces (LRF).</li>
+<li>Developed predictive and preventive maintenance strategies reducing downtime.</li>
+<li>Executed mechanical system planning and coordinated large-scale industrial installation projects.</li>
+<li>Performed emergency maintenance during production ensuring zero mechanical delays.</li>
+</ul>
+
+</section>
+
+<section>
+<h2>Contact</h2>
+<p>
+Email: <a href="mailto:s.ahmed.buetme156@gmail.com">s.ahmed.buetme156@gmail.com</a><br>
+LinkedIn: <a href="https://www.linkedin.com/in/s-ahmed156/" target="_blank">Profile</a><br>
+Google Scholar: <a href="https://scholar.google.com/citations?user=03_kQUQAAAAJ" target="_blank">Scholar Link</a>
+</p>
+</section>
 
 </body>
+</html>
