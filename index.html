@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Salahuddin Ahmed | Materials & Device Engineer</title>
+  <style>
+    :root { --text:#111; --muted:#555; --line:#e6e6e6; --link:#0b63d1; }
+    body { font-family: Arial, Helvetica, sans-serif; color: var(--text); margin: 0; }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 48px 20px; }
+    .top { display:flex; gap:24px; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; }
+    h1 { margin:0; font-size: 40px; letter-spacing:-0.5px; }
+    .title { margin:8px 0 0; color: var(--muted); font-weight:600; }
+    .links { margin-top:14px; display:flex; gap:14px; flex-wrap:wrap; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .card { border:1px solid var(--line); border-radius:14px; padding:18px; }
+    .summary { margin-top: 18px; color: var(--muted); max-width: 70ch; }
+    hr { border:none; border-top:1px solid var(--line); margin: 28px 0; }
+    h2 { margin: 0 0 12px; font-size: 20px; }
+    ul { margin: 10px 0 0 18px; color: var(--muted); }
+    .grid { display:grid; grid-template-columns: 1fr; gap:14px; }
+    @media (min-width: 820px) { .grid { grid-template-columns: 1fr 1fr; } }
+    .foot { margin-top: 30px; color: var(--muted); font-size: 14px; }
+    .pill { display:inline-block; border:1px solid var(--line); border-radius:999px; padding:6px 10px; margin:6px 8px 0 0; color: var(--muted); font-size: 14px;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <h1>Salahuddin Ahmed</h1>
+        <div class="title">Materials & Device Engineer • Microfabrication • Semiconductor Process</div>
+        <div class="summary">
+          Hands-on experience in lithography-based device fabrication, conductive composite engineering, and
+          advanced materials characterization. Focused on process optimization, defect reduction, and
+          measurement-driven validation.
+        </div>
+        <div class="links">
+          <a href="mailto:YOUR_EMAIL">Email</a>
+          <a href="YOUR_LINKEDIN" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="YOUR_SCHOLAR" target="_blank" rel="noreferrer">Google Scholar</a>
+          <a href="YOUR_CV_LINK" target="_blank" rel="noreferrer">Download CV (PDF)</a>
+        </div>
+      </div>
+      <div class="card" style="min-width:260px;">
+        <strong>Core strengths</strong>
+        <div style="margin-top:10px;">
+          <span class="pill">Cleanroom lithography</span>
+          <span class="pill">Spin coating</span>
+          <span class="pill">Thin-film processing</span>
+          <span class="pill">SEM / EDS</span>
+          <span class="pill">XPS</span>
+          <span class="pill">FTIR / Raman</span>
+          <span class="pill">Electrical validation</span>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <h2>Selected Engineering Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <strong>Lithography-Based Mesh Electrode Fabrication</strong>
+        <ul>
+          <li>Patterned micro-structures using spin coating + UV lithography (MLA, MABA6)</li>
+          <li>Improved pattern fidelity by tuning exposure/development and alignment steps</li>
+          <li>Verified continuity and uniformity via electrical checks and microscopy</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <strong>Printable Conductive Composite (Alginate–Liquid Metal)</strong>
+        <ul>
+          <li>Optimized rheology for DIW printing (100–300 µm nozzles)</li>
+          <li>Mapped conductivity vs composition and print conditions</li>
+          <li>Validated microstructure and elemental distribution using SEM/EDS</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <strong>Reactive Conductive Adhesive (PU–PAA g-IPN + PEDOT:PSS)</strong>
+        <ul>
+          <li>Built reversible solid↔gel conductive interface for reliable skin contact</li>
+          <li>Confirmed chemistry with FTIR (V70) and Raman (LabRAM HR)</li>
+          <li>Performed mechanical + impedance testing for device-readiness</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <strong>Materials Characterization for Process Feedback</strong>
+        <ul>
+          <li>Used spectroscopy and surface analysis to verify composition and uniformity</li>
+          <li>Correlated microstructure with electrical/mechanical performance</li>
+          <li>Identified failure modes (non-uniform dispersion, voids, interfacial defects)</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr />
+
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card">
+        <strong>Microfabrication</strong>
+        <ul>
+          <li>Spin coating • UV lithography (MLA, MABA6) • cleanroom workflow</li>
+          <li>Thin-film processing • pattern transfer • process optimization</li>
+        </ul>
+      </div>
+      <div class="card">
+        <strong>Characterization & Testing</strong>
+        <ul>
+          <li>SEM/EDS • XPS • FTIR (V70) • Raman (LabRAM HR) • XRD • rheology</li>
+          <li>Electrical testing • impedance spectroscopy • resistance mapping</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot">
+      © <span id="y"></span> Salahuddin Ahmed • Built with GitHub Pages
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
